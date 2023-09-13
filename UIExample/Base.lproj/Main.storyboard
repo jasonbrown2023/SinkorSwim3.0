@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kLb-Jp-HGp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kLb-Jp-HGp">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -326,30 +326,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number for Stepper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-UM-W8e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number for Stepper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-UM-W8e">
                                 <rect key="frame" x="120" y="103" width="152" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="Rbv-3h-bR0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-up-d2d">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-up-d2d">
                                 <rect key="frame" x="149" y="132" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="c8n-75-jUb"/>
+                                </constraints>
                                 <connections>
                                     <action selector="numberStepper:" destination="2gD-tU-KT9" eventType="valueChanged" id="ZrS-cd-ud3"/>
                                 </connections>
                             </stepper>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEU-8p-PXW">
-                                <rect key="frame" x="172" y="231" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MEU-8p-PXW">
+                                <rect key="frame" x="172" y="231" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="VPx-RT-OIL"/>
+                                </constraints>
                                 <connections>
                                     <action selector="dankModeSwitch:" destination="2gD-tU-KT9" eventType="valueChanged" id="xh1-aN-pj2"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activate Dank Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7e-aW-1EV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activate Dank Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7e-aW-1EV">
                                 <rect key="frame" x="120" y="202" width="153" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="Q5C-0O-Jwv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,6 +365,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YBJ-uf-EQo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MEU-8p-PXW" firstAttribute="top" secondItem="o7e-aW-1EV" secondAttribute="bottom" constant="8" symbolic="YES" id="0aW-7s-mL4"/>
+                            <constraint firstItem="iIo-UM-W8e" firstAttribute="top" secondItem="YBJ-uf-EQo" secondAttribute="top" id="4ZF-6N-IVQ"/>
+                            <constraint firstItem="YBJ-uf-EQo" firstAttribute="trailing" secondItem="K5h-up-d2d" secondAttribute="trailing" constant="150" id="AQA-pz-Fgm"/>
+                            <constraint firstItem="MEU-8p-PXW" firstAttribute="leading" secondItem="YBJ-uf-EQo" secondAttribute="leading" constant="172" id="BIU-HN-YcA"/>
+                            <constraint firstItem="YBJ-uf-EQo" firstAttribute="trailing" secondItem="MEU-8p-PXW" secondAttribute="trailing" constant="172" id="CD7-gB-zuh"/>
+                            <constraint firstItem="YBJ-uf-EQo" firstAttribute="trailing" secondItem="o7e-aW-1EV" secondAttribute="trailing" constant="120" id="GjZ-J5-o6g"/>
+                            <constraint firstItem="K5h-up-d2d" firstAttribute="top" secondItem="iIo-UM-W8e" secondAttribute="bottom" constant="8" symbolic="YES" id="U6K-rH-9sh"/>
+                            <constraint firstItem="o7e-aW-1EV" firstAttribute="top" secondItem="K5h-up-d2d" secondAttribute="bottom" constant="38" id="VT6-Kx-efo"/>
+                            <constraint firstItem="YBJ-uf-EQo" firstAttribute="trailing" secondItem="iIo-UM-W8e" secondAttribute="trailing" constant="121" id="h5c-5d-BHP"/>
+                            <constraint firstItem="K5h-up-d2d" firstAttribute="leading" secondItem="YBJ-uf-EQo" secondAttribute="leading" constant="149" id="jI3-wP-tAI"/>
+                            <constraint firstItem="iIo-UM-W8e" firstAttribute="leading" secondItem="YBJ-uf-EQo" secondAttribute="leading" constant="120" id="mC5-Oc-28f"/>
+                            <constraint firstItem="o7e-aW-1EV" firstAttribute="leading" secondItem="YBJ-uf-EQo" secondAttribute="leading" constant="120" id="oye-ni-KZX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VSG-p4-p4Q"/>
                     <connections>

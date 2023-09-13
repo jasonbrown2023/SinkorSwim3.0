@@ -12,6 +12,7 @@ class SwitchStepController: UIViewController {
 
     @IBOutlet weak var numberStepper: UIStepper!
     @IBOutlet weak var numberLabel: UILabel!
+
     
     lazy var numberModel = {
         return NumberModel.sharedInstance()
@@ -30,6 +31,14 @@ class SwitchStepController: UIViewController {
     
     @IBAction func dankModeSwitch(_ sender: UISwitch) {
         if sender.isOn{
+            let alert = UIAlertController(title: "Dank Mode Activated", message: "Dank Mode has been activated.\n\n📣📣📣📣📣📣\n\nPrepare yourself.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("I accept this fate", comment: "This closes alert"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+
+            // This part of code inits alert view
+            self.present(alert, animated: true, completion: nil)
+            
             self.view.backgroundColor = UIColor.green
         }else{
             self.view.backgroundColor = UIColor.white
